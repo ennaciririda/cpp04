@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 22:42:16 by rennacir          #+#    #+#             */
-/*   Updated: 2023/10/27 16:51:30 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/10/27 23:17:19 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,19 @@
 #include "Cure.hpp"
 #include "Character.hpp"
 
+// void func()
+// {
+// 	system("leaks ex03");
+// }
+
 int main()
 {
+	// atexit(func);
+	Ice *ice = new Ice();
+	Cure *cure = new Cure();
 	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
+	src->learnMateria(ice);
+	src->learnMateria(cure);
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
@@ -35,5 +43,7 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
+	delete ice;
+	delete cure;
 	return 0;
 }

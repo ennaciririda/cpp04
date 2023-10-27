@@ -15,23 +15,13 @@
 #include "Ice.hpp"
 Ice::Ice() : AMateria()
 {
-	std::cout << "Ice Default Constructor called" << std::endl;
-}
-
-Ice::Ice(std::string const &type) : AMateria(type)
-{
-	std::cout << "Ice Parametrized Constructor called" << std::endl;
 	this->type = "ice";
-}
-
-std::string const &Ice::getType() const
-{
-	return this->type;
+	// std::cout << "Ice Default Constructor called" << std::endl;
 }
 
 Ice *Ice::clone() const
 {
-	Ice *ice = new Ice("ice");
+	Ice *ice = new Ice();
 	return ice;
 }
 
@@ -42,5 +32,5 @@ void Ice::use(ICharacter &target)
 
 Ice::~Ice()
 {
-	std::cout << "Ice Destructor called" << std::endl;
+	// std::cout << "Ice Destructor called" << std::endl;
 }

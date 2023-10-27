@@ -15,12 +15,12 @@
 
 Character::Character()
 {
-	std::cout << "Character Default Constructor called" << std::endl;
+	// std::cout << "Character Default Constructor called" << std::endl;
 }
 
 Character::Character(std::string name)
 {
-	std::cout << "Character Parametrized Constructor called" << std::endl;
+	// std::cout << "Character Parametrized Constructor called" << std::endl;
 	this->name = name;
 	for (int i = 0; i < 4 ; i++)
 		this->inventory[i] = NULL;
@@ -28,7 +28,7 @@ Character::Character(std::string name)
 
 Character::Character(const Character &obj)
 {
-	std::cout << "Character Copy Constructor called" << std::endl;
+	// std::cout << "Character Copy Constructor called" << std::endl;
 	*this = obj;
 }
 
@@ -38,7 +38,7 @@ Character &Character::operator=(const Character &obj)
 
 	if (this != &obj)
 	{
-		std::cout << "Character copy assignment operator called" << std::endl;
+		// std::cout << "Character copy assignment operator called" << std::endl;
 		this->name = obj.name;
 		for (int i = 0; i < 4 ; i++)
 			this->inventory[i] = obj.inventory[i];
@@ -86,5 +86,5 @@ void Character::use(int idx, ICharacter &target)
 
 Character::~Character()
 {
-	std::cout << "Character Destructor called" << std::endl;
+	// std::cout << "Character Destructor called" << std::endl;
 }

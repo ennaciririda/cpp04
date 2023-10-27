@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:43:23 by rennacir          #+#    #+#             */
-/*   Updated: 2023/10/26 14:59:11 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/10/27 23:22:04 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@
 	{
 		public:
 			Ice();
-			Ice(std::string const & type);
-			std::string const & getType() const;
 			Ice* clone() const;
 			void use(ICharacter& target);
 			~Ice();
