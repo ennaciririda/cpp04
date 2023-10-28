@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 22:10:59 by rennacir          #+#    #+#             */
-/*   Updated: 2023/10/28 00:54:35 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/10/28 14:22:12 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,6 @@ AMateria *MateriaSource::createMateria(std::string const &type)
 MateriaSource::~MateriaSource()
 {
 	// std::cout << "MateriaSource Destructor called" << std::endl;
+	for (int i = 0; i < 4; i++)
+		delete this->inventory[i];
 }

@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 22:42:16 by rennacir          #+#    #+#             */
-/*   Updated: 2023/10/27 23:17:19 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/10/28 14:49:54 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 
 int main()
 {
-	// atexit(func);
 	Ice *ice = new Ice();
 	Cure *cure = new Cure();
 	IMateriaSource* src = new MateriaSource();
@@ -43,7 +42,5 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
-	delete ice;
-	delete cure;
 	return 0;
 }

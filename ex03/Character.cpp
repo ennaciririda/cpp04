@@ -24,6 +24,7 @@ Character::Character(std::string name)
 	this->name = name;
 	for (int i = 0; i < 4 ; i++)
 		this->inventory[i] = NULL;
+	this->gcl = NULL;
 }
 
 Character::Character(const Character &obj)
@@ -41,7 +42,12 @@ Character &Character::operator=(const Character &obj)
 		// std::cout << "Character copy assignment operator called" << std::endl;
 		this->name = obj.name;
 		for (int i = 0; i < 4 ; i++)
-			this->inventory[i] = obj.inventory[i];
+		{
+			if (obj.inventory[i] == NULL)
+				this->inventory[i] == NULL;
+			else
+				this->inventory[i] = obj.inventory[i]->clone();
+		}
 	}
 	return *this;
 }
@@ -69,6 +75,7 @@ void Character::unequip(int idx)
 	{
 		if (i == idx && this->inventory[i] != NULL)
 		{
+			this->gcl = this->inventory[i];
 			this->inventory[i] = NULL;
 			break;
 		}
@@ -87,4 +94,7 @@ void Character::use(int idx, ICharacter &target)
 Character::~Character()
 {
 	// std::cout << "Character Destructor called" << std::endl;
+	for (int i = 0; i < 4; i++)
+		delete this->inventory[i];
+	delete this->gcl;
 }

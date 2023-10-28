@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 21:25:19 by rennacir          #+#    #+#             */
-/*   Updated: 2023/10/27 18:29:53 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/10/28 20:53:00 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Character : public ICharacter
 	private :
 		std::string name;
 		AMateria *inventory[4];
+		AMateria *gcl;
 	public :
 		Character();
 		Character(std::string name);
