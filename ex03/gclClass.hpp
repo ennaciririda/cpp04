@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   gclClass.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 18:43:23 by rennacir          #+#    #+#             */
-/*   Updated: 2023/10/29 15:57:51 by rennacir         ###   ########.fr       */
+/*   Created: 2023/10/29 15:16:45 by rennacir          #+#    #+#             */
+/*   Updated: 2023/10/29 15:22:47 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE
-#define ICE
+#ifndef GCLCLASS_H
+#define GCLCLASS_H
 
-#include <iostream>
 #include "AMateria.hpp"
 
-	class Ice : public AMateria
-	{
-		public:
-			Ice();
-			Ice(const Ice &obj);
-			Ice& operator=(const Ice &obj);
-			Ice* clone() const;
-			void use(ICharacter& target);
-			~Ice();
-	};
+class gclClass
+{
+private:
+	AMateria *gcl;
+public:
+	gclClass(AMateria *a);
+	~gclClass();
+};
+
 #endif

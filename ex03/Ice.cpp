@@ -19,6 +19,22 @@ Ice::Ice() : AMateria()
 	// std::cout << "Ice Default Constructor called" << std::endl;
 }
 
+Ice::Ice(const Ice &obj)
+{
+	// std::cout << "Ice Copy Constructor called" << std::endl;
+	*this = obj;
+}
+
+Ice &Ice::operator=(const Ice &obj)
+{
+	if (this != &obj)
+	{
+		// std::cout << "Ice copy assignment operator called" << std::endl;
+		this->type = obj.type;
+	}
+	return *this;
+}
+
 Ice *Ice::clone() const
 {
 	Ice *ice = new Ice();

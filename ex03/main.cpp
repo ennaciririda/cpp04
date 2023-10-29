@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 22:42:16 by rennacir          #+#    #+#             */
-/*   Updated: 2023/10/28 14:49:54 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/10/29 15:28:07 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@
 
 int main()
 {
-	Ice *ice = new Ice();
-	Cure *cure = new Cure();
+	// atexit(func);
 	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(ice);
-	src->learnMateria(cure);
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
 	tmp = src->createMateria("ice");

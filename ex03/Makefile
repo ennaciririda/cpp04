@@ -6,7 +6,7 @@
 #    By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/04 11:06:35 by rennacir          #+#    #+#              #
-#    Updated: 2023/10/26 22:46:22 by rennacir         ###   ########.fr        #
+#    Updated: 2023/10/29 15:24:08 by rennacir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,10 @@ CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 OBJDIR = .objFiles
-FILES			= main AMateria Character Cure Ice MateriaSource
+FILES			= main AMateria Character Cure Ice MateriaSource gclClass
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= AMateria.hpp Character.hpp Cure.hpp ICharacter.hpp IMateriaSource.hpp Ice.hpp MateriaSource.hpp
+HEADER		= AMateria.hpp Character.hpp Cure.hpp ICharacter.hpp IMateriaSource.hpp Ice.hpp MateriaSource.hpp gclClass.hpp
 
 #Colors:
 GREEN		=	$(shell tput setaf 2)
